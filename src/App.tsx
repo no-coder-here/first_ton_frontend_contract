@@ -46,15 +46,14 @@ function App() {
         )
       }
 
-      <br>
-        {connected && (
+      {
+        connected && (
           <a onClick={() => {
             sendDeposit()
           }} >
           Deposit 0.05 TON </a>
-        )
+          )
         }
-      </br>
     </div>
   </div>
 )}
