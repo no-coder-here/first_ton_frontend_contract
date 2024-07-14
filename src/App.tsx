@@ -12,7 +12,8 @@ function App() {
     counter_value, 
     contract_balance,
     sendIncrement,
-    sendDeposit
+    sendDeposit, 
+    sendWithdrawal
   } = useMainContract();
 
   const { connected } = useTonConnect();
@@ -51,7 +52,18 @@ function App() {
           <a onClick={() => {
             sendDeposit()
           }} >
-          Deposit 0.05 TON </a>
+          Deposit 0.5 TON </a>
+          )
+        }
+
+        < br />
+
+        {
+          connected && (
+            <a onClick={() => {
+              sendWithdrawal()
+            }} >
+            Withdraw 0.2 TOM </a>
           )
         }
     </div>
