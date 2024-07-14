@@ -3,12 +3,12 @@ name: Deploy
 on:
     push:
         branches: 
-            - master
+            - main
 
 jobs:
     build:
         name: Build
-        runs-on: ubumtu-latest
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout repo
